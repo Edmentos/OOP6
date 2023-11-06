@@ -1,5 +1,6 @@
 package ie.atu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Array
 {
@@ -23,8 +24,15 @@ public class Array
         array[8] = 900;
         array[9] = 1000;
 
-        System.out.print("Enter a value to be stored in array[10]: ");
-        array[10] = scanner.nextInt();
+        try
+        {
+            System.out.print("Enter a value to be stored in array[10]: ");
+            array[10] = scanner.nextInt();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Array[10] DOESNT EXIST!!!!!");
+        }
 
         for (int i = 0; i <= 9; i++)
         {
